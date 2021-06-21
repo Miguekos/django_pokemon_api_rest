@@ -41,52 +41,54 @@ http://localhost:8000/api/pokemon/2
 ### Demo
 ```sh
 $ python manage.py fetchpokemons 2
-$ http://localhost:8000/api/pokemon/charmander
+$ http://localhost:8000/api/pokemon/charmeleon
 ```
 ### Response
 The pokemons data is returned is:
 ````
 {
-  "id_pokemon": 4,
-  "name": "charmander",
-  "height": 6,
-  "weight": 85,
+  "id_pokemon": 5,
+  "name": "charmeleon",
+  "height": 11,
+  "weight": 190,
   "stats": [
     {
       "name": "hp",
-      "base_stat": 39
+      "base_stat": 58
     },
     {
       "name": "attack",
-      "base_stat": 52
+      "base_stat": 64
     },
     {
       "name": "defense",
-      "base_stat": 43
+      "base_stat": 58
     },
     {
       "name": "special-attack",
-      "base_stat": 60
+      "base_stat": 80
     },
     {
       "name": "special-defense",
-      "base_stat": 50
+      "base_stat": 65
     },
     {
       "name": "speed",
-      "base_stat": 65
+      "base_stat": 80
     }
   ],
   "evolutions": [
     {
-      "id_pokemon": "5",
-      "name": "charmeleon",
-      "detail": "https://pokeapi.co/api/v2/pokemon/5"
+      "id_pokemon": "4",
+      "name": "charmander",
+      "detail": "pre_evolutions",
+      "info": "https://pokeapi.co/api/v2/pokemon/4"
     },
     {
       "id_pokemon": "6",
       "name": "charizard",
-      "detail": "https://pokeapi.co/api/v2/pokemon/6"
+      "detail": "evolutions_to",
+      "info": "https://pokeapi.co/api/v2/pokemon/6"
     }
   ]
 }
