@@ -9,38 +9,25 @@ This is a Django App that fetches pokemons evolution chains from the [PokeApi](h
 - django-filter==2.4.0
 - requests==2.25.1
 
-### Installation
-
-Install the dependencies and start the server.
-
+### How it works
+his endpoint only needs the "name" parameter to get the pokemon information
 ```sh
-$ mkdir pokemon_apí
-$ cd pokemon_apí
-$ python -m venv env
-$ source env/bin/activate  # On Windows use `env\Scripts\activate`
-$ pip install -r requirements.txt
-$ python manage.py migrate
-$ python manage.py createsuperuser
-$ python manage.py runserver
+$ docker-compose up -d --build
+$ docker-compose run app python manage.py makemigrations
+$ docker-compose run app python manage.py migrate
+
 ```
 
 ### Fetching and Storing Pokemon Chains Data
 To fetch and store the pokemons data you can use the `fetchpokemons` custom django-admin commands
 
 ```sh
-$ python manage.py fetchpokemons <EVOLUTION_POKEMON_ID>
-```
-
-### How it works
-his endpoint only needs the "name" parameter to get the pokemon information
-```sh
-http://localhost:8000/api/pokemon/<POKEMON_NAME>
-http://localhost:8000/api/pokemon/2
+$ docker-compose run app python manage.py fetchpokemons <EVOLUTION_POKEMON_ID>
 ```
 
 ### Demo
 ```sh
-$ python manage.py fetchpokemons 2
+$ docker-compose run app python manage.py fetchpokemons 2
 $ http://localhost:8000/api/pokemon/charmeleon
 ```
 ### Response
