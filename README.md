@@ -35,6 +35,13 @@ $ python manage.py fetchpokemons <EVOLUTION_POKEMON_ID>
 his endpoint only needs the "name" parameter to get the pokemon information
 ```sh
 http://localhost:8000/api/pokemon/<POKEMON_NAME>
+http://localhost:8000/api/pokemon/2
+```
+
+### Demo
+```sh
+$ python manage.py fetchpokemons 2
+$ http://localhost:8000/api/pokemon/charmander
 ```
 ### Response
 The pokemons data is returned is:
