@@ -23,9 +23,9 @@ class PokemonsEvol(models.Model):
     id_evol = models.IntegerField()
     id_pokemon = models.CharField(max_length=15)
     name = models.CharField(max_length=15)
-    min_lvl = models.CharField(max_length=15)
+    position = models.CharField(max_length=15)
     detail = models.CharField(max_length=15)
-    evolution_chain = models.IntegerField()
+    info = models.CharField(max_length=15)
 
     def __str__(self):
         return self.name

@@ -18,4 +18,4 @@ class PokemonsDataSerializer(serializers.ModelSerializer):
 class PokemonsEvolSerializer(serializers.ModelSerializer):
     class Meta:
         model = PokemonsEvol
-        fields = ('id_pokemon', 'name', 'detail')
+        fields = ('id_pokemon', 'name', 'detail', 'info')
