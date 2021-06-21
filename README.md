@@ -18,7 +18,7 @@ $ mkdir pokemon_apí
 $ cd pokemon_apí
 $ python -m venv env
 $ source env/bin/activate  # On Windows use `env\Scripts\activate`
-$ pip install -r requirements.txt
+$ pip install -r requeriments.txt
 $ python manage.py migrate
 $ python manage.py createsuperuser
 $ python manage.py runserver
